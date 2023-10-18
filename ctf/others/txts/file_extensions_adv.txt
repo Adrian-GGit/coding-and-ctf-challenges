@@ -1,0 +1,1 @@
+php,sh,txt,cgi,html,css,js,py,bin,cpp,conf,jpg,gif,log,pdf,png,src,zip,tar

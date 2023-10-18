@@ -1,0 +1,10 @@
+hunter2:
+    - hash: cf505baebbaf25a0a4c63eb93331eb36
+    - token: ???
+
+test2:
+    - hash=cc01954052c12da128d3880bd34f3b94
+    - token=ZTJiYjYxZTc0NGM1MjZkODNmZTQwOWU4ZmEwNDA5ZWI2ZjdiNTU5OTI5ZGNjMGRmNDM3Y2E1M2UzODAyYzdhMmM3NGUxYzFmYjk0OThkMTNkMDYzY2Q5YWZkYmIzOTg2MTY1OTAxNTlkMzgyNGJlMjU4ZTg5ODliZTYwMDVkNGI%3D
+
+keineahnung:
+    - hash=48c21d77876a6328b59188e90ca516f7

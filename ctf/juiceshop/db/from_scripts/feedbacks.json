@@ -1,0 +1,82 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "id": null,
+            "name": 4,
+            "description": "Incompetent customer support! Can't even upload photo of broken purchase!<br /><em>Support Team: Sorry, only order confirmation PDFs can be attached to complaints!</em> (anonymous)",
+            "price": 2,
+            "deluxePrice": "2022-09-27 14:53:06.697 +00:00",
+            "image": "2022-09-27 14:53:06.697 +00:00",
+            "createdAt": "a",
+            "updatedAt": "a",
+            "deletedAt": "a"
+        },
+        {
+            "id": null,
+            "name": 5,
+            "description": "This is <b>the</b> store for awesome stuff of all kinds! (anonymous)",
+            "price": 4,
+            "deluxePrice": "2022-09-27 14:53:06.697 +00:00",
+            "image": "2022-09-27 14:53:06.697 +00:00",
+            "createdAt": "a",
+            "updatedAt": "a",
+            "deletedAt": "a"
+        },
+        {
+            "id": null,
+            "name": 6,
+            "description": "Never gonna buy anywhere else from now on! Thanks for the great service! (anonymous)",
+            "price": 4,
+            "deluxePrice": "2022-09-27 14:53:06.697 +00:00",
+            "image": "2022-09-27 14:53:06.697 +00:00",
+            "createdAt": "a",
+            "updatedAt": "a",
+            "deletedAt": "a"
+        },
+        {
+            "id": null,
+            "name": 7,
+            "description": "Keep up the good work! (anonymous)",
+            "price": 3,
+            "deluxePrice": "2022-09-27 14:53:06.697 +00:00",
+            "image": "2022-09-27 14:53:06.697 +00:00",
+            "createdAt": "a",
+            "updatedAt": "a",
+            "deletedAt": "a"
+        },
+        {
+            "id": 1,
+            "name": 1,
+            "description": "I love this shop! Best products in town! Highly recommended! (***in@juice-sh.op)",
+            "price": 5,
+            "deluxePrice": "2022-09-27 14:53:05.710 +00:00",
+            "image": "2022-09-27 14:53:05.710 +00:00",
+            "createdAt": "a",
+            "updatedAt": "a",
+            "deletedAt": "a"
+        },
+        {
+            "id": 2,
+            "name": 2,
+            "description": "Great shop! Awesome service! (***@juice-sh.op)",
+            "price": 4,
+            "deluxePrice": "2022-09-27 14:53:05.715 +00:00",
+            "image": "2022-09-27 14:53:05.715 +00:00",
+            "createdAt": "a",
+            "updatedAt": "a",
+            "deletedAt": "a"
+        },
+        {
+            "id": 3,
+            "name": 3,
+            "description": "Nothing useful available here! (***der@juice-sh.op)",
+            "price": 1,
+            "deluxePrice": "2022-09-27 14:53:05.719 +00:00",
+            "image": "2022-09-27 14:53:05.719 +00:00",
+            "createdAt": "a",
+            "updatedAt": "a",
+            "deletedAt": "a"
+        }
+    ]
+}

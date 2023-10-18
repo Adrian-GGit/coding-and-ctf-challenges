@@ -1,0 +1,42 @@
+{
+    "3": {
+        "link": "/people-rater",
+        "name": "People Rater",
+        "description": "The grinch likes to keep lists of all the people he hates. This year he's gone digital but there might be a record that doesn't belong!"
+    },
+    "4": {
+        "link": "/swag-shop",
+        "name": "Swag Shop",
+        "description": "Get your Grinch Merch! Try and find a way to pull the Grinch's personal details from the online shop."
+    },
+    "5": {
+        "link": "/secure-login",
+        "name": "Secure Login",
+        "description": "Try and find a way past the login page to get to the secret area."
+    },
+    "6": {
+        "link": "/my-diary",
+        "name": "My Diary",
+        "description": "Hackers! It looks like the Grinch has released his Diary on Grinch Networks. We know he has an upcoming event but he hasn't posted it on his calendar. Can you hack his diary and find out what it is?"
+    },
+    "7": {
+        "link": "/hate-mail-generator",
+        "name": "Hate Mail Generator",
+        "description": "Sending letters is so slow! Now the grinch sends his hate mail by email campaigns! Try and find the hidden flag!"
+    },
+    "8": {
+        "link": "/forum",
+        "name": "Forum",
+        "description": "The Grinch thought it might be a good idea to start a forum but nobody really wants to chat to him. He keeps his best posts in the Admin section but you'll need a valid login to access that!"
+    },
+    "9": {
+        "link": "/evil-quiz",
+        "name": "Evil Quiz",
+        "description": "Just how evil are you? Take the quiz and see! Just don't go poking around the admin area!"
+    },
+    "10": {
+        "link": "/signup-manager",
+        "name": "Signup Manager",
+        "description": "You've made it this far! The grinch is recruiting for his army to ruin the holidays but they're very picky on who they let in!"
+    }
+}

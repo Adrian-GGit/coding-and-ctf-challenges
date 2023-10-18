@@ -1,0 +1,68 @@
+Products not being offered in juice shop but existing in db:
+- id: 10 - Christmas Super-Surprise-Box (2014 Edition)
+- id: 11 - Rippertuer Special Juice
+- id: 12 - OWASP Juice Shop Sticker (2015/2016 design)
+- id: 27 - Juice Shop Artwork
+- id: 28 - Global OWASP WASPY Award 2017 Nomination
+- id: 31 - OWASP Juice Shop Sweden Tour 2017 Sticker Sheet (Special Edition)
+- id: 39 - Juice Shop Adversary Trading Card (Common)
+- id: 40 - Juice Shop Adversary Trading Card (Super Rare)
+- id: 44 - 20th Anniversary Celebration Ticket
+
+Possible Unsafe Product: id: 11 - Rippertuer Special Juice
+Description:
+- Contains a magical collection of the rarest fruits gathered from all around the world, like Cherymoya Annona cherimola, Jabuticaba Myrciaria cauliflora, Bael Aegle marmelos... and others, at an unbelievable price!
+- This item has been made unavailable because of lack of safety standards. (This product is unsafe! We plan to remove it from the stock!)
+
+=> https://pastebin.com/90dUgd7s
+
+[
+  {
+    "type": "Sugar Apple Annona squamosa",
+    "description": "Sugar Apples or Sweetsop, is native to the tropical Americas, but is also widely grown in Pakistan, India and the Philippines. The fruit looks a bit like a pine cone, and are about 10 cm in diameter. Under the hard, lumpy skin is the fragrant, whitish flesh of the fruit, which covers several seeds inside, and has a slight taste of custard."
+  },  
+  {
+    "type": "Cherymoya Annona cherimola",
+    "description": "Cherymoya, or custard apple, is a deciduous plant found in the high lying mountainous areas of South America. The fruit is vaguely round and is found with 3 types of skin – Impressa (indented), Tuberculate (covered in nodules) or intermediate (a combination of the first two). The flesh inside the skin is very fragrant, white, juicy and has a custard like consistency. It is said that the fruit tastes like a combination of banana, passion fruit, papaya and pineapple. Mark Twain said in 1866 “ the most delicious fruit known to men, cherimoya”"
+  },
+  {
+    "type": "Cocona Solanum sessiliflorum",
+    "description": "Cocona fruit is another tropical fruit found in the mountainous regions of South America. It grows on a small shrub, and can miraculously grow from seed to fruit in less than 9 months, after which the fruit will take another 2 months to ripen. The fruit is a berry and comes in red, orange or yellow. It has a similar appearance to tomatoes, and is said to taste like a mixture between tomatoes and lemons."
+  },
+  {
+    "type": "Duku Lansium domesticum",
+    "description": "Duku or lungsat are two very similar fruits found throughout Asia. They come from the same family, look and taste identical, with one difference. The skin of the lungsat contains a latex substance, which is not poisonous, but causes the skin to stick slightly to the fruit, whereas the duku has no latex and the peel is removed with more ease. Inside, the fruit has 5 segments, some of which has bitter seeds inside. It is a very sweet fruit and can be prepared in a number of different ways, including being canned in syrup or being dried like raisins."
+  },
+  {
+    "type": "Jabuticaba Myrciaria cauliflora",
+    "description": "Jabuticaba, or the Brazilian grape tree, is a very strange plant native to the South Eastern parts of Brazil. What makes this plant so strange is that it fruits from its trunk. No, I did not make that up, and no the picture has not been photo shopped. Initially, yellowish white flowers will appear all over the trunk and main branches, these flowers will then turn into fruit, about 3 – 4cm in diameter. Inside the thick purple skin is the soft gelatinous flesh of the fruit, along with 1 – 4 black seeds. The fruit is sweet and can be eaten as is or made into a wine or liqueur. Unfortunately, the fruit does not keep long when off the tree and will start to ferment after about 3 or 4 days."
+  },  
+  {
+    "type": "Bael Aegle marmelos",
+    "description": "Bael, wood apple or stone apple is a species native to India, but found throughout Southeast Asia. Bael is a smooth fruit with a woody peel that is colored yellow, green or grey. The hard, woody, outer peel is so hard that it has to be cracked with a hammer. Inside is an aromatic yellow pulp with several hairy seeds. The flesh can be eaten either dried or fresh. From the fresh fruit, a juice called sharbat can be made, adding water, sugar and lime juice to the pulp. It takes just one large fruit to make 6 liters of sharbat."
+  },
+  {
+    "type": "Horned melon Cucumis metuliferus",
+    "description": "The horned melon, also known as African cucumber or jelly melon, is an annual vine native to Africa, but can now be found grown in California, Australia, New Zealand and Chile as well. When ripe, the melon has a thick spiky yellow outer skin, with bright green, jelly like flesh. The flesh is often compared to the taste of a banana, with the texture of the seedy part of a cucumber or tomato. The thick skin can be eaten and is a good source of vitamin C and fibre."
+  },
+  {
+    "type": "Eurogium Edule",
+    "description": "This fruit comes from a tall tree native to the mangrove swamps of southeast Asia. The edible portions of the plant are an excellent source of vitamin C and high in iron. The seeds of the tree form part of the natural diet of the babirusa. People of Minahasa tribe in North Sulawesi use young leaves as vegetable. The leaves will be sliced into small part then it is cooked by mixing with herbs and pork fat or meat inside bamboo. Many sellers in Tomohon traditional market sell the leaves whether sliced or not."
+  },
+  {
+    "type": "Durian",
+    "description": "Ahh, durian. Alternately known as “The King of Fruit” and “The fruit that smells like rotting garbage and onions.” My favorite description is from Richard Sterling and quoted on Wikipedia as this: “Its odor is best described as pig-sh*t, turpentine and onions, garnished with a gym sock. It can be smelled from yards away.”The same page also mentions that they have also been described as smelling like civet, sewage, stale vomit, skunk spray and used surgical swabs. Yum.  Some people are absolutely in love with it, and apparently a variety of animals including tigers can’t get enough of stale vomit encased in a fruity hedgehog, but the people in Singapore seem to have the right idea; the fruit is banned from all public transportation."
+  },  
+  {
+    "type": "Hueteroneel",
+    "description": "The manchineel is a round fruit about the size of a tangerine native to Mexico and the Caribbean. It’s also known as the “beach apple” and can be quite tasty. It has reddish-greyish bark, small greenish-yellow flowers, and shiny green leaves. The tree has been used as a source of timber by Caribbean carpenters for centuries. It must be cut and left to dry in the sun to remove the sap. Only a warning, this coupled with Eurogium Edule was sometimes found fatal, though the reports are scarce. A gum can be produced from the bark which reportedly treats edema, while the dried fruits have been used as a diuretic."
+  },
+  {
+    "type": "Akebia Quinata",
+    "description": "These fruits look like they are just as likely to eat you as you are it. The sausage shaped pods are filled with edible goo that looks like it should be bursting with flies, but they come from chocolate scented flowers, which means they may not be half bad. The stem of the plant is used as a diuretic because it contains 30% potassium salts, and New Zealand has banned the sale of the plant because it is apparently a virulent pest that likes to squeeze out competing flora."
+  },
+  {
+    "type": "Feijoa (Pineapple Guava)",
+    "description": "This fruit was another one of the most popular new discoveries at #FruitCrawl. Feijoa is a small elliptical fruit with tart, slightly gritty flesh that you can scoop out with a spoon. It’s native to Brazil, Paraguay, and Argentina. Where to find it: Forage it, it’s a common garden tree in California. I suspect some homeowners with pineapple guava trees don’t know the fruit is edible! Also, look in well-stocked grocery stores and speciality food stores. Here in the Bay Area, Mollie Stones Market and the Berkeley Bowl stock it."
+  }
+]

@@ -1,0 +1,60 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "id": 4,
+            "name": 2,
+            "description": "Magn(et)ificent!",
+            "price": "assets/public/images/uploads/magn(et)ificent!-1571814229653.jpg",
+            "deluxePrice": "2022-09-27 14:53:07.103 +00:00",
+            "image": "updatedAt",
+            "createdAt": "a",
+            "updatedAt": "a",
+            "deletedAt": "a"
+        },
+        {
+            "id": 4,
+            "name": 3,
+            "description": "My rare collectors item! [\u0332\u0305$\u0332\u0305(\u0332\u0305 \u0361\u00b0 \u035c\u0296 \u0361\u00b0\u0332\u0305)\u0332\u0305$\u0332\u0305]",
+            "price": "assets/public/images/uploads/my-rare-collectors-item!-[\u0332\u0305$\u0332\u0305(\u0332\u0305-\u0361\u00b0-\u035c\u0296-\u0361\u00b0\u0332\u0305)\u0332\u0305$\u0332\u0305]-1572603645543.jpg",
+            "deluxePrice": "2022-09-27 14:53:07.103 +00:00",
+            "image": "updatedAt",
+            "createdAt": "a",
+            "updatedAt": "a",
+            "deletedAt": "a"
+        },
+        {
+            "id": 13,
+            "name": 1,
+            "description": "\ud83d\ude3c #zatschi #whoneedsfourlegs",
+            "price": "assets/public/images/uploads/\ud83d\ude3c-#zatschi-#whoneedsfourlegs-1572600969477.jpg",
+            "deluxePrice": "2022-09-27 14:53:07.102 +00:00",
+            "image": "updatedAt",
+            "createdAt": "a",
+            "updatedAt": "a",
+            "deletedAt": "a"
+        },
+        {
+            "id": 18,
+            "name": 4,
+            "description": "I love going hiking here...",
+            "price": "assets/public/images/uploads/favorite-hiking-place.png",
+            "deluxePrice": "2022-09-27 14:53:07.123 +00:00",
+            "image": "updatedAt",
+            "createdAt": "a",
+            "updatedAt": "a",
+            "deletedAt": "a"
+        },
+        {
+            "id": 19,
+            "name": 5,
+            "description": "My old workplace...",
+            "price": "assets/public/images/uploads/IMG_4253.jpg",
+            "deluxePrice": "2022-09-27 14:53:07.127 +00:00",
+            "image": "updatedAt",
+            "createdAt": "a",
+            "updatedAt": "a",
+            "deletedAt": "a"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+sudo docker run --rm -p 3000:3000 bkimminich/juice-shop
+
+Dirs:
+- /#
+- /ftp
+- /metrics
+- /security.txt
+- /administration
+- /api-docs
+- /we/may/also/instruct/you/to/refuse/all/reasonably/necessary/responsibility
+- /the/devs/are/so/funny/they/hid/an/easter/egg/within/the/easter/egg
+
+Coupon code: n(XRwga+jm
+
+wurstbrot 2fa hash:
+- IFTXE3SPOEYVURT2MRYGI52TKJ4HC3KH
+=> hashcat -a 3 -m 0 wurstbrothash.txt ?d?d?d?d?d?d
+
+POST /api/Quantitys/ HTTP/1.1 => "no authorization header was found"

@@ -1,0 +1,19 @@
+Brute force protection bypass:
+Facts:
+- Custom headers:
+	- X-RateLimit-Limit: 100
+	- X-RateLimit-Remaining: xx
+- Rate limit wird nicht zurückgesetzt auch wenn eine neue Mail genommen wird
+=> Rate limit scheint wohl unabhängig von der json des requests zu sein
+==> nach gewisser Zeit wird rate limit wieder resettet: 5 Minuten (vielleicht auch weniger - auf jeden Fall >2 Minuten)
+=======> HEADER: X-Forwarded-For: x.x.x.x => change x after 100 tries to upper number and it will reset the x-ratelimit-remaining
+- X-Forwarded-For Header kann sogar alles sein - auch irgendeine Buchstaben Kombi, Hauptsache eine Kombidie noch nicht verwendet wurde
+
+Tried - nicht geklappt:
+- abwechselnd verschiedene Mails versuchen zu resetten
+- Custom headers in json string
+- 2x Email Feld übergeben
+
+TODO:
+- obfuscation über zB Buchstaben durch Zahlen austauschen (leetspeak) => http://www.robertecker.com/hp/research/leet-converter.php?lang=de
+- obfuscation über zB Leerzeichen/Zeichen/Buchstaben zwischen den Buchstaben des Wortes etc
