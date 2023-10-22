@@ -1,0 +1,12 @@
+/.html               [33m (Status: 403)[0m [Size: 315]
+/login               [32m (Status: 200)[0m [Size: 1726]
+/register            [32m (Status: 200)[0m [Size: 1665]
+/assets              [36m (Status: 301)[0m [Size: 389][34m [--> http://32bb10a149f294591eff894deeebe5f9.ctf.hacker101.com/assets/][0m
+/test.php            [32m (Status: 200)[0m [Size: 0]
+/logout              [36m (Status: 302)[0m [Size: 0][34m [--> ./][0m
+/favicon             [32m (Status: 200)[0m [Size: 5430]
+/robots              [32m (Status: 200)[0m [Size: 38]
+/robots.txt          [32m (Status: 200)[0m [Size: 38]
+/dashboard           [36m (Status: 302)[0m [Size: 0][34m [--> login][0m
+/reset               [32m (Status: 200)[0m [Size: 1563]
+/.html               [33m (Status: 403)[0m [Size: 315]

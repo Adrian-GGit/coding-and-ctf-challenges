@@ -1,0 +1,1 @@
+/api                 [36m (Status: 302)[0m [Size: 0][34m [--> ../swag-shop/api/][0m

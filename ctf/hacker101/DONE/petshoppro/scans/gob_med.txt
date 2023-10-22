@@ -1,0 +1,5 @@
+/login                (Status: 200) [Size: 329]
+/static               (Status: 301) [Size: 170] [--> http://c357a979ac3eb7a30718cf19400d4b41.ctf.hacker101.com/static/]
+/cart                 (Status: 200) [Size: 410]
+/edit                 (Status: 400) [Size: 192]
+/checkout             (Status: 405) [Size: 178]

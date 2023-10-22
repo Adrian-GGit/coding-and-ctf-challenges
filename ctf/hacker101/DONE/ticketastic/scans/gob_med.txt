@@ -1,0 +1,2 @@
+/login               [32m (Status: 200)[0m [Size: 313]
+/admin               [32m (Status: 200)[0m [Size: 13]

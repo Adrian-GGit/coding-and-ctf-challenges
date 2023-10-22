@@ -1,0 +1,21 @@
+attack payloads:
+- launch/?payload=eyJ0YXJnZXQiOiIyMDMuMC4xMTMuMzMiLCJoYXNoIjoiNWYyOTQwZDY1Y2E0MTQwY2MxOGQwODc4YmMzOTg5NTUifQ==
+	=> {"target":"203.0.113.33","hash":"5f2940d65ca4140cc18d0878bc398955"}
+- launch/?payload=eyJ0YXJnZXQiOiIyMDMuMC4xMTMuNTMiLCJoYXNoIjoiMjgxNGY5YzczMTFhODJmMWI4MjI1ODUwMzlmNjI2MDcifQ==
+	=> {"target":"203.0.113.53","hash":"2814f9c7311a82f1b822585039f62607"}
+- launch/?payload=eyJ0YXJnZXQiOiIyMDMuMC4xMTMuMjEzIiwiaGFzaCI6IjVhYTliNWE0OTdlMzkxOGMwZTE5MDBiMmEyMjI4YzM4In0=
+	=> {"target":"203.0.113.213","hash":"5aa9b5a497e3918c0e1900b2a2228c38"}
+
+hash:
+- salted hash with salt "mrgrinch463" (hashcat mode 20 - salt.pass)
+=> hash for "127.0.0.1" is "3e3f8df1658372edf0214e202acb460b"
+	=> "Local target detected, aborting attack"
+
+attack box commandline:
+- ../82d7f69babf691ea35ca5a141742248d.json?id=
+- ../682f9848bf3bc615053bce802560f2ec.json?id=
+- ../4248cd5e96a40c0e40b56dbabf49b74b.json?id=
+=> json files are for printing out commandline like results
+
+using https://lock.cmpxchg8b.com/rebinder.html for dns rebinding:
+- 192.168.0.1 aka 7f000001.c0a80001.rbndr.us => de9d82d4ae9a61660701e7e1844ea643

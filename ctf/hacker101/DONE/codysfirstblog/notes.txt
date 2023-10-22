@@ -1,0 +1,10 @@
+lfi:
+- ?page
+- /index.php?page=/etc/passwd => throwing interesting error
+
+admin page:
+- /index.php?page=admin.auth.inc
+
+Credentials:
+- username: probably something with "admin", "cody", ...
+- password: brute force this

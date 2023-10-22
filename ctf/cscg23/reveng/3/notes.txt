@@ -1,0 +1,1 @@
+- der 0 Terminator am Ende wird korrumpiert => ganz am Ende des Passwortes muss also ein char stehen welcher durch die Veränderung der ganzen chars zum 0 Terminator wird

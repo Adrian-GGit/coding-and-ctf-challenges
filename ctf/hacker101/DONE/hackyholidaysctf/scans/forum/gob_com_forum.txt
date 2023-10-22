@@ -1,0 +1,5 @@
+/1                   [36m (Status: 302)[0m [Size: 0][34m [--> ../forum/1/][0m
+/2                   [36m (Status: 302)[0m [Size: 0][34m [--> ../forum/2/][0m
+/3                   [36m (Status: 302)[0m [Size: 0][34m [--> ../forum/3/][0m
+/login               [36m (Status: 302)[0m [Size: 0][34m [--> ../forum/login/][0m
+/phpmyadmin          [36m (Status: 302)[0m [Size: 0][34m [--> ../forum/phpmyadmin/][0m

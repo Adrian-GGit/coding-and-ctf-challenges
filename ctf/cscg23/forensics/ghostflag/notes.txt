@@ -1,0 +1,29 @@
+- root is running a nano process with a file /home/ctf/flag
+- a file .flag.swp indicates that root is currently making changes
+=> kill nano process of user
+	-> unsaved changes should be written in the /home/ctf/flag.save
+	=> but there is no /home/ctf/flag.save
+- in /proc/10 werden einige Prozess relevanten Informationen gespeichert
+=> entweder wird der content noch irgendwie anders gebuffert - da ansonsten eine .save file entstehen würde
+=> oder es ist gar nichts gebuffert und die .save ist nur eine Ablenkung
+
+command: socat EXEC:/usr/bin/nano /home/ctf/flag,SU=ctf,pty FILE:/dev/null
+=> socat: socat tool
+=> EXEC: fork a subprocess that establishes communication with its parent process and invokes the specified program
+	=> /usr/bin/nano /home/ctf/flag: use nano to write and read the file "flag"
+=> SU: change user/group of the process after processing the address
+	=> ctf: the user "ctf" to which the process privileges will be dropped
+	=> pty: using pseudo terminal for communication with parent process
+=> FILE: 
+	=> /dev/null: black hole for information
+
+Es gibt außerdem 2x denselben command - der zweite command: socat tcp-l:1024,reuseaddr,fork EXEC:/bin/bash,SU=ctf,pty,stderr,
+=> wird etabliert sobald man sich mit der Maschine verbindet, der erste command entsteht direkt bei der erstellung der maschine so als würde sich jemand zweites auch auf der maschine anmelden
+
+Ideen:
+- Nutze socat um von 0 lrwx------ 1 ctf ctf 64 Mar  8 15:51 3 -> 'socket:[3054200]'
+File descriptor 3 von /proc/10 alles in eine file zu schreiben
+
+socat FD:<fd-number> FILE:/home/ctf/theflag
+
+socat EXEC:"/urs/bin/nano /home/ctf/flag",SETPGID=10 FILE:/home/ctf/theflag

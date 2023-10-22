@@ -1,0 +1,5 @@
+/img                  (Status: 301) [Size: 0] [--> img/]
+/index.html           (Status: 301) [Size: 0] [--> ./]
+/index.html           (Status: 301) [Size: 0] [--> ./]
+/main.css             (Status: 200) [Size: 217]
+/r                    (Status: 301) [Size: 0] [--> r/]

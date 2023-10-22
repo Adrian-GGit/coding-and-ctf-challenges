@@ -1,0 +1,1 @@
+/auctions            [36m (Status: 302)[0m [Size: 0][34m [--> login][0m

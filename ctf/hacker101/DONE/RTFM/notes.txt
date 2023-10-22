@@ -1,0 +1,57 @@
+Endpoints:
+- /api/v1
+	- /user
+	- /secrets
+	- /config
+	- /status
+	- /Tunis
+- /api/v2
+	- /swagger.json
+	- /admin/user-list
+
+Ideas:
+- gobuster scan on /secrets
+- /secrets
+	- brute force possible used X-Forwarded-For Header to get access from right ip
+		=> 127.0.0.1
+		=> 196.168.0.1
+- /user
+	- /
+		- create account		
+			- user POST
+			=> username=asdf&password=asdf data fields and Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+		- edit account
+			- user PUT
+			=> avatar=http://localhost/api/v1/secrets
+			=> due to ssrf /secrets endpoint can be received via server itself as localhost
+	- /login
+		- use POST
+		=> username=asdf&password=asdf data fields and Content-Type: application/x-www-form-urlencoded; charset=UTF-8 
+	- possible ways of posting information to an api:
+		- json
+		- url params
+		- data fields
+		- as header???
+	- Ideas
+		=> edit created account with PUT
+			- use ffuf to fuzz possible updateable parameters
+			- ffuf -u https://3f691cda4f8af62a1ebf43bd2315c504.ctf.hacker101.com/api/v1/user -w /usr/share/seclists/Fuzzing/fuzz-Bo0oM.txt -X PUT -d "FUZZ=test" -H "X-Token: b5da4b9b876d00dfd9e791864175aaa0" -H "Content-Type: application/x-www-form-urlencoded; charset=UTF-8"
+			=> with -mc 400 you can test whether command is running correct - maybe you can let it print the response as output
+			- probably updateable parameters need to be passed in json format
+		=> probably out of token hash admin hash can be reproduced or someone elses hash
+		==> with PUT admin password can be changed
+	- /posts/1
+		=> login with user and take its token
+- /status
+	- ?verbose=asdf
+- /Tunis
+- http verb fuzzing
+	- python http_method_fuzzing.py -u https://6daec05f890a14a11265ca2bab6132d6.ctf.hacker101.com/api/v1 -oN ~/hacking/hacker101/RTFM/scans/http_vars_fuzz -d secrets,user,status,config
+- Neptune openresty version is probably vulnerable to xss with <IMG SRC="javascript:alert('XSS');"> as path in url for 404 Error Page
+
+
+General sec issues:
+- sql injection
+- xss
+- bad credentials
+- unsecured http verbs

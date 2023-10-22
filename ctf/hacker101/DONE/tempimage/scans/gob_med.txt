@@ -1,0 +1,6 @@
+/.php                [33m (Status: 403)[0m [Size: 321]
+/.phtml              [33m (Status: 403)[0m [Size: 323]
+/index.php           [32m (Status: 200)[0m [Size: 202]
+/.html               [33m (Status: 403)[0m [Size: 322]
+/files               [36m (Status: 301)[0m [Size: 387][34m [--> http://e54e33fd5c1f86f646137cca6bfe20c5.ctf.hacker101.com/files/][0m
+/upload.php          [32m (Status: 200)[0m [Size: 572]

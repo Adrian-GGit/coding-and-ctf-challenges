@@ -1,0 +1,23 @@
+===============================================================
+Gobuster v3.2.0-dev
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     https://e767bf2aacc980fbd0f06fdbd28f949f.ctf.hacker101.com/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.2.0-dev
+[+] Extensions:              js,php,phtml,txt,html,css
+[+] Timeout:                 10s
+===============================================================
+2022/10/23 15:55:52 Starting gobuster in directory enumeration mode
+===============================================================
+/assets               (Status: 301) [Size: 178] [--> http://e767bf2aacc980fbd0f06fdbd28f949f.ctf.hacker101.com/assets/]
+/favicon.ico          (Status: 200) [Size: 5430]
+/forum                (Status: 302) [Size: 0] [--> forum/]
+/robots.txt           (Status: 200) [Size: 120]
+/robots.txt           (Status: 200) [Size: 120]
+Progress: 32290 / 32305 (99.95%)===============================================================
+2022/10/23 16:10:42 Finished
+===============================================================

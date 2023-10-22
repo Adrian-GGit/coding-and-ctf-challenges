@@ -1,0 +1,17 @@
+Users:
+- admin
+- user => password: password
+
+Information:
+- usernames are only lowercase characters => brute force possible
+- ids are sometimes md5 encrypted (cookie, delete id)
+
+Ideas:
+- hydra brute force admin and user account
+- lfi via php
+- xss attacks
+- sqli
+
+not working hydra:
+hydra -l user -P /usr/share/wordlists/fasttrack.txt 5ce28e94adede7af5638ad3315279245.ctf.hacker101.com http-post-form "/index.php?page=sign_in.php:username=^USER^&password=^PASS^:You've entered a wrong" -o scans/hydra_user
+

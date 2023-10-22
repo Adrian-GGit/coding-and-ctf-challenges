@@ -1,0 +1,4 @@
+Upload just looking at magic numbers
+=> upload revshell.php with png magic numbers
+
+uploads are saved at /files/...

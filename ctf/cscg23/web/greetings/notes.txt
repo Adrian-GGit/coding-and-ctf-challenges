@@ -1,0 +1,16 @@
+Admin username: administrator
+=> but administrator doesn't seem to be active - he is not visiting the greetings
+
+Auffällig:
+- XSS on message payload
+- staff/admin users are marked with "0x1"
+- in login.php something is outcommented //session_destroy(); //session_start();
+- POST /admin/manage_admins.php
+=> in implementation an "exit" is missing
+=> you can upgrade a user to an admin
+=> watch the flag in the /admin/view_greetings.php
+==> forge post request with correct contenttype header and mode and target_username attributes
+- in beiden view_greetings wird kein php "trim" verwendet um den username zu validieren
+
+Encoded administrator pw:
+SZX5PE2jWDw8SgnD6c0w5k2km1Cu489n3JXme5UoHJVwvi9dOZiln7v5TsfvaCj4

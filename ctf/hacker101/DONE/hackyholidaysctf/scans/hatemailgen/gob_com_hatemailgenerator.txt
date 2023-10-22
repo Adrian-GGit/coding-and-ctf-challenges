@@ -1,0 +1,2 @@
+/new                 [36m (Status: 302)[0m [Size: 0][34m [--> ../hate-mail-generator/new/][0m
+/templates           [36m (Status: 302)[0m [Size: 0][34m [--> ../hate-mail-generator/templates/][0m

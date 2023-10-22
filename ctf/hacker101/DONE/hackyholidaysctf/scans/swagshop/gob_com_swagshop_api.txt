@@ -1,0 +1,3 @@
+/sessions            [36m (Status: 302)[0m [Size: 0][34m [--> ../../swag-shop/api/sessions/][0m
+/stock               [36m (Status: 302)[0m [Size: 0][34m [--> ../../swag-shop/api/stock/][0m
+/user                [36m (Status: 302)[0m [Size: 0][34m [--> ../../swag-shop/api/user/][0m

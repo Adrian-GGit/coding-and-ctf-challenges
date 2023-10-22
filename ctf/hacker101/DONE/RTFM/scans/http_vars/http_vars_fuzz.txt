@@ -1,0 +1,25 @@
+/secrets
+	GET: 403
+	CONNECT: 405
+	TRACE: 405
+/user
+	GET: 400
+	POST: 400
+	PUT: 400
+	CONNECT: 405
+	TRACE: 405
+/user/login
+        POST: 400
+        CONNECT: 405
+        TRACE: 405
+/status
+	GET: 200
+	CONNECT: 405
+	TRACE: 405
+/config
+	GET: 200
+	CONNECT: 405
+	TRACE: 405
+/
+	CONNECT: 405
+	TRACE: 405

