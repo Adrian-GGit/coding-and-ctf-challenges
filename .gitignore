@@ -195,3 +195,7 @@ others/tools/*
 # linux files
 *.swp
 *.zip
+
+# codeforces files
+input.txt
+output.txt
