@@ -1,0 +1,1 @@
+This repository contains my solutions and approaches for various challenges including CTF (capture the flag) and coding challenges on platforms like [leetcode](https://leetcode.com/) and [codeforces](https://codeforces.com/).
