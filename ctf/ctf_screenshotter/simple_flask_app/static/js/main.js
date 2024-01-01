@@ -1,1 +1,0 @@
-document.getElementById("docker_stinkt").innerHTML = document.cookie;

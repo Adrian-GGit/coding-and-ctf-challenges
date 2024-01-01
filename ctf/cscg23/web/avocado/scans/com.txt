@@ -1,3 +1,0 @@
-/favicon.ico         [32m (Status: 200)[0m [Size: 3870]
-/robots.txt          [32m (Status: 200)[0m [Size: 67]
-/robots.txt          [32m (Status: 200)[0m [Size: 67]

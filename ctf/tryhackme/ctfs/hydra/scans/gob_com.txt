@@ -1,3 +1,0 @@
-/assets              [36m (Status: 301)[0m [Size: 179][34m [--> /assets/][0m
-/css                 [36m (Status: 301)[0m [Size: 173][34m [--> /css/][0m
-/img                 [36m (Status: 301)[0m [Size: 173][34m [--> /img/][0m

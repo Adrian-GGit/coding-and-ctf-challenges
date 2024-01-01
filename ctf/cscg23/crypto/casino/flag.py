@@ -1,1 +1,0 @@
-FLAG = "cscg test flag"

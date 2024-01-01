@@ -1,7 +1,0 @@
-Endpoints:
-- /admin
-	- every subdirectory seems to be "forbidden" no matter if it exists
-		=> try gobuster but ignore 403
-
-- try uploading a ".htaccess" or something
-- uploading a .php file but uploading it as a ".png" works

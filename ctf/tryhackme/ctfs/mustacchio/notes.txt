@@ -1,9 +1,0 @@
-interesting:
-- contact.html => submit will submit user parameters?
-
-admin page credentials:
-=> username: admin
-=> password: 1868e36a6d2b17d4c2745f1659433a54d4bc5f4b (sha-1) ==> bulldog19
-
-ssh username: barry
-ssh password: ???

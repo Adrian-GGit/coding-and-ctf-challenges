@@ -1,7 +1,0 @@
-Infos about machine:
-- Debian
-- X86 Architecture
-
-Ideas:
-- experimentieren mit ltrace und strace wie Null Byte auszusehen hat
-- evtl buffer overflow mit link to RDP und nachfolgender Shellcode execution
